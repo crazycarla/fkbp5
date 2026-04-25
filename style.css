@@ -1,0 +1,64 @@
+/* fkbp5.com — plain. */
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background: #ffffff;
+  max-width: 760px;
+  margin: 1em auto;
+  padding: 0 1em;
+}
+
+a:link    { color: #0000ee; }
+a:visited { color: #551a8b; }
+a:hover   { text-decoration: none; }
+
+h1 { font-size: 1.6em; margin: 0.4em 0 0.2em; }
+h2 { font-size: 1.25em; margin: 1.6em 0 0.3em; }
+h3 { font-size: 1.1em;  margin: 1.2em 0 0.2em; }
+h4 { font-size: 1em;    margin: 1em 0 0.2em; }
+
+p { margin: 0.7em 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #999;
+  margin: 1.5em 0;
+}
+
+ul, ol { margin: 0.5em 0; padding-left: 1.5em; }
+li { margin: 0.2em 0; }
+
+blockquote {
+  margin: 1em 0 1em 1.5em;
+  color: #333;
+}
+
+code, pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.site-nav {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+.site-nav a { margin-right: 0.5em; }
+
+.byline {
+  font-style: italic;
+  color: #444;
+  margin: 0.3em 0 1em;
+}
+
+.page-nav {
+  margin-top: 2em;
+  padding-top: 0.6em;
+  border-top: 1px solid #999;
+  font-size: 0.95em;
+}
+
+.page-nav .prev::before { content: "« "; }
+.page-nav .next::after  { content: " »"; }
