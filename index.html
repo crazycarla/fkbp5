@@ -3,83 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FKBP5 T/T Is Not a Risk Allele. It's a Calibration System.</title>
+<title>FKBP5, cortisol, and a few things that follow from it</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="site-nav">
 <a href="index.html">Home</a> |
-<a href="part1-machinery.html">Part 1</a>
-<a href="part2-weather.html">Part 2</a>
-<a href="part3-storm.html">Part 3</a>
-<a href="part4-seasons.html">Part 4</a>
-<a href="part5-climate.html">Part 5</a>
-<a href="part6-implications.html">Part 6</a> |
 <a href="references.html">References</a>
 </div>
-<h1 id="fkbp5-tt-is-not-a-risk-allele-its-a-calibration-system">FKBP5 T/T Is Not a Risk Allele. It's a Calibration System.</h1>
-<h3 id="a-systems-engineering-perspective-on-stress-adaptation-environmental-mismatch-and-the-mechanisms-of-hyperfocus-seasonal-depression-burnout-and-trauma-adaptation">A systems engineering perspective on stress adaptation, environmental mismatch, and the mechanisms of hyperfocus, seasonal depression, burnout, and trauma adaptation</h3>
-<p><strong>Carla — Draft, April 2026</strong></p>
-<h2 id="contents">Contents</h2>
-<ul>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#summary-of-novel-hypotheses">Summary of Novel Hypotheses</a></li>
-<li><a href="#note-on-origin">Note on Origin</a></li>
-<li><a href="part1-machinery.html">Part 1: The Machinery</a></li>
-<li><a href="part2-weather.html">Part 2: Weather (Minutes to Hours)</a></li>
-<li><a href="part3-storm.html">Part 3: Storm and Aftermath (Weeks to Years)</a></li>
-<li><a href="part4-seasons.html">Part 4: Seasons (Weeks to Months)</a></li>
-<li><a href="part5-climate.html">Part 5: Climate (Childhood, Likely Permanent)</a></li>
-<li><a href="part6-implications.html">Part 6: Implications and Proposed Studies</a></li>
-<li><a href="references.html">Key References</a></li>
-</ul>
-<h2 id="summary">Summary</h2>
-<p>The FKBP5 rs1360780 T/T genotype is widely described in the psychiatric literature as a "risk allele" for depression, PTSD, and stress-related disorders. This framing is hard to reconcile with the biology. Across multiple vertebrate species, variation in FKBP5 expression produces variation in adaptive responses to stress. In humans, rs1360780 is the common polymorphism that modulates this, with the T variant appearing at roughly 20-30% frequency in European populations (Binder et al., 2008). A variant this common would not persist if it were purely deleterious; it is a polymorphism that pays off often enough to have survived the filter.</p>
-<p>The framing of FKBP5 as a calibration system that tunes stress responsiveness to prevailing conditions has been developing in conservation biology (Zimmer et al., 2020). The mechanism is clearly calibration. The direction is where I diverge. The conservation literature reads low FKBP5 expression as the adaptive setting — more flexibility, better coping. Reading the same mechanism from a systems engineering perspective reaches the opposite conclusion for sustained-stress environments: T/T is the high-induction variant of this calibration system, and what the psychiatric literature reads as T/T dysfunction is the cost this calibration pays when it no longer matches the current environment.</p>
-<p>The mechanism fits the hypothesis. FKBP51 aggressively blunts both cortisol signaling and glutamate signaling — the two primary damage pathways of sustained stress. This is what a system built to tolerate extended high-threat conditions would do, at the cost of responsiveness when the threat resolves. The CC genotype behaves like a fixed-setpoint controller with fast error correction. The T-allele system behaves like an adaptive controller that shifts its operating range based on sustained input. Each outperforms the other in different environments.</p>
-<p>A methodological consequence follows. Effective GR activation — not circulating cortisol — is what determines outcomes, and it depends on FKBP5 genotype, NR3C1 methylation, AMPA receptor density, GSK3β activity, and photoperiod history alongside cortisol itself. The contradictory cortisol literature is evidence that cortisol level alone is the wrong dependent variable, not that stress hormones are unrelated to these conditions.</p>
-<p>The paper identifies four timescales on which this calibration produces observable effects: <strong>weather</strong> (minutes to hours — hyperfocus and inattention), <strong>storm</strong> (weeks to years — burnout and the hypoarousal presentation of PTSD), <strong>seasons</strong> (weeks to months — seasonal depression), and <strong>climate</strong> (childhood, likely permanent — the chronic mismatch that clinicians recognize as complex PTSD or treatment-resistant depression). ADHD, SAD, occupational burnout, treatment-resistant depression, and hypoarousal PTSD may, in a subset of patients, share a single upstream cause.</p>
-<p>Low-dose lithium (via GSK3β inhibition) restores glutamate signaling and halts AMPA receptor removal without requiring the cortisol-GR pathway that is itself impaired. It is a prosthetic for the GSK3β suppression that a matched environment would normally provide.</p>
-<p>Throughout, "T-allele carriers" refers to both CT and TT genotypes; CT shows the same effects as TT but milder. Some claims in this paper are supported by existing literature; others are novel and should be read as testable predictions. A specific set of predictions and proposed study designs is provided at the end. If the tone occasionally overshoots standard psychiatric beige, consider that an ecologically valid data point. The author is T/T.</p>
+
+<h1 id="top">FKBP5, cortisol, and a few things that follow from it</h1>
+<p class="byline">Carla — rewritten September 2026</p>
+
+<p>This page used to be about six times longer. It argued that FKBP5 rs1360780 T/T is a calibration system rather than a risk allele, and then built a lot of mechanism on top of that — burnout as glucocorticoid receptor desensitization, seasonal depression as receptor sensitivity lagging the photoperiod, and a set of treatment protocols I should not have written down.</p>
+
+<p>I still think the framing was pointed at something real. Several of the middle-layer mechanisms were wrong, and the treatment section was the wrong thing for a non-clinician to publish. So I cut it to what I can actually defend. What's left is shorter and more tentative, which is a better match for how much I actually know. The <a href="#what-changed">list of what I removed</a> is at the bottom.</p>
+
 <hr />
-<h2 id="summary-of-novel-hypotheses">Summary of Novel Hypotheses</h2>
-<h3 id="part-2-weather-minutes-to-hours"><a href="part2-weather.html">Part 2: Weather (Minutes to Hours)</a></h3>
-<ul>
-<li>FKBP51 compresses the functional range for T-allele carriers through two multiplicative effects: rightward-shifted cortisol dose-response AND reduced AMPA receptor density. The effective signal is cortisol-driven glutamate release × AMPA receptor density, and FKBP51 reduces both. This produces the co-occurrence of inattention and hyperfocus as below-range and above-range states of the same system.</li>
-<li>ADHD stimulants flood tonic dopamine but do not restore the glutamatergic context in which phasic dopamine signals are detected. This may explain why stimulants compensate for but do not reverse the underlying deficit (Maltezos et al., 2014). Lithium orotate, by restoring tonic glutamate release and halting GSK3β-driven AMPA receptor removal, addresses a different layer of the problem.</li>
-<li>ADHD presents as a broad spectrum because FKBP5 sets how much activation is needed to come online, while other genes (e.g., DRD4) determine what kind of input gets glutamate past the depleted AMPA receptors most efficiently. The interaction is multiplicative.</li>
-<li>Hyperreactivity in ADHD reflects both GR underactivation in the locus coeruleus AND insufficient glutamatergic drive to LC neurons.</li>
-</ul>
-<h3 id="part-3-storm-and-aftermath"><a href="part3-storm.html">Part 3: Storm and Aftermath</a></h3>
-<ul>
-<li>Burnout and the hypoarousal presentation of PTSD are proposed to be, mechanistically, GR desensitization: NR3C1 methylation accumulated during sustained stress reduces GR expression, and when the stressor is removed, desensitized receptors produce insufficient glutamate signaling. The "tissue mosaic" — different cell turnover rates across tissues — explains why burnout doesn't present like Cushing's or Addison's: by the time patients present, fast-turnover tissues have already recovered, and only slow-turnover, GR-dependent tissues (brain, muscle, adipose) remain symptomatic.</li>
-<li>FKBP51 is predicted to shift the balance between structural damage and signaling depletion during the storm. CC carriers would accumulate more GR-mediated structural damage acutely (dendritic retraction, spine loss, amygdala hypertrophy); T-allele carriers would accumulate less acute structural damage but deeper signaling depletion (AMPA loss from both pathways masked by compensating cortisol). Neither genotype is spared. Over longer timescales, chronic AMPA depletion in T-allele carriers produces structural consequences of its own through activity-dependent spine maintenance failure; the dichotomy is sharpest during the storm phase and blurs on year-scale timescales.</li>
-<li>"Wired but tired" is a single GR desensitization event rather than comorbid anxiety, fatigue, and depression: norepinephrine goes UP (LC disinhibition), epinephrine goes DOWN (PNMT impairment), glutamate goes DOWN (GR desensitization).</li>
-<li>CC and T-allele carriers are predicted to face different recovery challenges. CC carriers face an architectural repair problem with an intact self-correcting GR loop. T-allele carriers entering recovery with deeper cumulative NR3C1 methylation are more likely to fall below the self-correcting floor, where recovery stalls. The molecular basis for this bistability is not settled.</li>
-<li>T-allele carriers who develop lasting post-traumatic conditions are predicted to be enriched in the hypoarousal/dissociative subtype of PTSD rather than the hyperarousal subtype, because FKBP51-mediated buffering would be expected to shift damage away from the hippocampal structures whose disruption produces flashbacks and intrusive memories.</li>
-<li>Lithium breaks the stall by suppressing GSK3β through a non-GR mechanism, simultaneously restoring glutamate release, halting GSK3β-driven AMPA receptor removal, and driving BDNF through CREB. Followed by GR reset (single ketamine infusion), with functioning driving natural recovery through activity-dependent BDNF and spine maintenance.</li>
-</ul>
-<h3 id="part-4-seasons-weeks-to-months"><a href="part4-seasons.html">Part 4: Seasons (Weeks to Months)</a></h3>
-<ul>
-<li>Seasonal depression in T-allele carriers is driven by GR receptor sensitivity failing to track changing photoperiod, compounded by increasing GSK3β activity as effective cortisol signaling declines.</li>
-<li>Winter depression and spring hypomania are a coupled oscillation. Intervening at either peak reduces the amplitude of both. Summer light management should be part of SAD treatment.</li>
-<li>The subjective experience of seasonal depression converges on a single molecular endpoint: overactive GSK3β simultaneously suppressing tonic glutamate release and driving AMPA receptor removal from synaptic surfaces, producing simultaneous dysfunction across all downstream neurotransmitter systems.</li>
-<li>Lithium orotate may make existing light therapy more effective by restoring glutamate signaling in the visual cortex — both increasing release and preserving the AMPA receptors that transduce the signal — amplifying photic input and creating a virtuous cycle where the intervention partially resolves the upstream problem it was designed to bypass.</li>
-</ul>
-<h3 id="part-5-climate-childhood-permanent"><a href="part5-climate.html">Part 5: Climate (Childhood, Permanent)</a></h3>
-<ul>
-<li>T-allele children calibrate for chronic stress by raising their activation threshold through both GR desensitization and AMPA receptor stripping — trading acute sensitivity for chronic tolerance.</li>
-<li>The Klengel epigenetic changes likely permanently elevate FKBP51 production, meaning FKBP51-mediated AMPA stripping likely never normalizes. Combined with insufficient cortisol-driven GSK3β suppression, AMPA receptors are removed by two independent pathways simultaneously. This is a chronic glutamate signaling deficit — impaired on both the release side and the receptor side — with no natural recovery pathway because neurons do not turn over.</li>
-<li>The chronic presentation of T-allele carriers with childhood adversity — emotional numbing, hyperreactivity, motivational collapse, cognitive impairment — is what clinicians recognize as complex PTSD. The calibration model reframes this as environmental mismatch rather than ongoing trauma damage.</li>
-<li>The DSM-5 dissociative subtype of PTSD may capture patients experiencing below-threshold flatness (cortisol-glutamate deficit) in addition to or instead of true dissociation (active prefrontal suppression). These are mechanistically distinct and would respond to different interventions.</li>
-<li>The emotional reactivity attributed to trauma history may reflect chronic LC disinhibition from both GR underactivation and insufficient glutamatergic drive, not active trauma responses being triggered.</li>
-<li>The GSK3β state in the climate layer is not fixed but varies with current environmental cortisol exposure. Klengel amplification raises the tonic FKBP51 floor, but GR-driven FKBP51 production and Akt-mediated GSK3β suppression both scale with cortisol spikes. A matched high-intensity environment engages both brakes; a mismatched calm environment engages neither. This predicts that "rest" and stress reduction can actively worsen climate-layer carriers by removing the GSK3β suppression that was keeping synaptic infrastructure intact — a direct mechanistic challenge to the standard treatment escalation toward lower-stimulation settings.</li>
-<li>Environment matching is the primary intervention for climate-layer carriers with a permanently elevated threshold. GR is a transcription factor whose outputs span LC modulation, PNMT, PFC dopamine, REDD1, metabolic regulation, immune function, and GSK3β suppression, among many others. No pharmacological agent replaces the breadth of GR signaling; adequate cortisol reaching adequate GR is the only input that engages the full set of downstream pathways. For a carrier with an elevated threshold, that requires an activation level sufficient to cross it.</li>
-<li>Lithium orotate addresses one specific consequence of low effective cortisol — unopposed GSK3β and the synaptic degradation it drives. It is valuable as an adjunct for carriers whose life circumstances cannot supply adequate environmental activation, or as protection against the ratchet when storms stack on climate, but it does not restore LC modulation, PNMT expression, or PFC dopamine. It prevents the worst downstream damage from an unresolved upstream deficit; it does not resolve the deficit.</li>
-</ul>
+
+<h2 id="cortisol-does-a-lot">Cortisol does more than stress</h2>
+
+<p>The thing that got me into this is that cortisol is an input to a surprising amount of machinery, so a shortfall doesn't present as one tidy syndrome. It shows up as an assortment of unrelated-looking complaints, which is a good way for a deficit to stay invisible to any single specialist.</p>
+
+<p>Two examples that matter for what follows. Glucocorticoids regulate glutamate release, and glutamate is the excitatory signal nearly every other neurotransmitter system needs in order to fire (Popoli et al., 2012). And glucocorticoids regulate tyrosine hydroxylase, the rate-limiting enzyme for dopamine synthesis — corticosterone raises TH expression in brainstem culture (Busceti et al., 2019), and the effect goes back to the older dexamethasone work (Oka et al., 1985).</p>
+
+<p>That second one is worth sitting with, because it means the ordinary "ADHD is a dopamine problem" story and a cortisol story are not competitors. If you are chronically low on effective cortisol signaling, running low on dopamine is a downstream consequence, not a separate disease. The dopamine finding could be perfectly correct and still not be the place to intervene.</p>
+
+<p>Caveat: the TH literature is mixed rather than settled. Adrenalectomy-plus-replacement studies have not consistently shown the corresponding change in central dopamine neuron activity, so "cortisol is required for dopamine synthesis" overstates it. "Cortisol is one of the regulators of the enzyme, and the interaction is real but context-dependent" is about as far as the evidence goes.</p>
+
+<h2 id="low-cortisol">Low cortisol is documented. The reason is not settled.</h2>
+
+<p>That cortisol runs low in stress-related conditions is not my idea and not new. Yehuda's group has been reporting low urinary cortisol in PTSD, alongside exaggerated suppression on low-dose dexamethasone, since the late 1980s (Yehuda, 2002).</p>
+
+<p>What I got wrong was the explanation. I had it as receptor-level: NR3C1 methylation accumulating during sustained stress, GR expression falling, and the whole thing locking in. Methylation is real and it is measured in burnout cohorts (Bakusic et al., 2021). But building the entire collapse on it made the story tidier than the data, and it made genotype carry more weight than genotype can carry.</p>
+
+<p>The version I now find more plausible puts more of the problem upstream, at the paraventricular nucleus — the hypothalamic node that drives the axis in the first place. Chronic stress dampens excitatory synaptic gain onto PVN neurons (Salter et al., 2018), and rats recovering from chronic variable stress show blunted ACTH and corticosterone responses for days after the stressor is gone (Ostrander et al., 2006). That is a drive problem, not a receptor problem. The axis is not being ignored downstream; it is being commanded less.</p>
+
+<p>I find this more convincing for exhaustion specifically, and it fits my own experience better: the feeling is not that signals are arriving and failing to land, it is that nothing is being sent. But I want to be clear that I am picking between mechanisms on the basis of plausibility and one rodent literature, not on the basis of anyone having measured this in exhausted humans.</p>
+
+<h2 id="not-cortisol-resistance">T/T is not standing cortisol resistance</h2>
+
+<p>People routinely talk about T/T carriers as though they are cortisol resistant the way someone is lactose intolerant — a fixed trait you have all day, every day. That cannot be right, and the reason is a clock.</p>
+
+<p>FKBP51 is an induced protein with a short half-life: roughly 8 hours for isoform 1, 4 for isoform 2 (Martinelli et al., 2024). Cortisol drives its transcription, and in T-allele carriers each cortisol pulse produces more of it. But it burns off. If T/T produced standing resistance, the pool would ratchet upward across a lifetime of cortisol exposure and carriers would become progressively more resistant with age until they were non-functional. That is not what happens.</p>
+
+<p>So the phenotype is dynamic, not static. What T/T buys you is a steeper induction curve on a pool that decays over hours — resistance that is a function of your recent cortisol history rather than your genotype alone. On an eight-hour window it looks like resistance. Across a life it looks like a thermostat with lag.</p>
+
+<p>This predicts intraday texture rather than a constant trait, and the texture is testable: a stressful morning should produce an afternoon trough as the induced pool peaks, and then a second wind in the evening as it clears. If T/T carriers turn out to be unusually attached to afternoon naps and unusually alive at 10pm, that is not a personality quirk, it is a protein half-life. I have not found anyone who has looked, and diurnal FKBP5 work in humans would be a cheap way to check.</p>
+
+<h2 id="attention">Hyperfocus and inattention as one system</h2>
+
+<p>The piece of the original I am most reluctant to give up, because it explains something the standard account handles badly: hyperfocus and inattention co-occur in the same person, and a pure deficit model has to treat one of them as an anomaly.</p>
+
+<p>If the functional range is compressed — activation needs to clear a higher threshold before anything comes online — then both are the same system read at different points. Below threshold, nothing recruits: inattention. Once something finally clears it, there is no graded middle to modulate with, so it recruits completely and will not release: hyperfocus. One range, two ends, no need for two disorders.</p>
+
+<p>FKBP5 variants have been associated with ADHD and with diurnal cortisol levels in children (Isaksson et al., 2015; Kim &amp; Jin, 2021), which is at least consistent, though these are small candidate-gene studies and should be treated accordingly.</p>
+
+<h2 id="seasonal">Seasonal depression as a gain problem, not a phase problem</h2>
+
+<p>The dominant account of seasonal depression is about timing: circadian phase drifting out of alignment. I do not think that is wrong so much as incomplete, because it does not explain the people whose problem is not that they are shifted but that they are flat all day.</p>
+
+<p>The alternative is that the light is arriving on schedule and registering at reduced amplitude. Bright light in the morning normally produces an immediate cortisol rise (Leproult et al., 2001). If cortisol is already low and glutamate signaling with it, the photic signal transduces weakly, the morning cortisol response is blunted, and cortisol stays low — which means the next morning's light registers just as weakly. It is a loop, and loops are why winter can lock in rather than simply tracking day length.</p>
+
+<p>Framed this way, it is a gain problem rather than a phase problem, and the two make different predictions. A phase problem should respond to correctly-timed light of ordinary intensity. A gain problem may not respond to ordinary intensity at all, because the input is being multiplied by a number that has gotten small — which would be one explanation for why light therapy works well for some people and does nothing for others.</p>
+
+<p>The weakest link here is DHEA. My intuition is that adrenal output beyond cortisol is part of the excitatory floor, and that low DHEA contributes to the same gain reduction. DHEA is a neurosteroid and does modulate NMDA receptors, so the shape of the idea is not crazy, but I went looking for a clean citation for the specific claim I want to make and did not find one that survives scrutiny — the paper I would most have liked to cite has an expression of concern on it. So I am flagging it as an intuition rather than dressing it up.</p>
+
 <hr />
-<h2 id="note-on-origin">Note on Origin</h2>
-<p>The author does not have a background in neuroscience or endocrinology. She is a software engineer whose professional experience includes years of operating queuing systems with adaptive rate-limiting and feedback-driven load management — systems where thresholds, lag dynamics, and timescale separations are everyday engineering problems. This framework emerged from applying those intuitions to her own burnout recovery as an FKBP5 rs1360780 T/T carrier, and finding that the stress system behaves like a badly tuned control loop.</p>
+
+<h2 id="what-changed">What I removed, and why</h2>
+
+<ul>
+<li><strong>All treatment content.</strong> The previous version named specific compounds, doses, and sequencing, including things available without a prescription. I am a software engineer with a genotype and a hypothesis, and that combination should not be publishing protocols. Removed entirely rather than caveated.</li>
+<li><strong>Burnout as GR desensitization.</strong> Replaced with the PVN drive account above. NR3C1 methylation is still real; it is no longer carrying the whole explanation.</li>
+<li><strong>Seasonal depression as GR sensitivity lagging photoperiod.</strong> Replaced with the light-gain loop.</li>
+<li><strong>T/T as cortisol resistance.</strong> Replaced with the half-life argument.</li>
+<li><strong>The genotype-stratified predictions</strong> — CC carriers crash this way, T-allele carriers crash that way. Internally consistent, far beyond what the evidence supports.</li>
+<li><strong>Most of the confidence.</strong> The original had a summary of novel hypotheses and proposed study designs, which lent it the cadence of a paper. It was never a paper.</li>
+</ul>
+
+<h2 id="status">Status</h2>
+
+<p>Notes, not medical advice, and not a substitute for talking to someone who is actually qualified. The author is not a clinician or a researcher; she is a software engineer who spent years operating queueing systems with adaptive rate limiting, got a T/T result and a burnout, and found that the stress axis behaves like a badly tuned control loop. That is a source of useful intuitions and also a source of the exact failure mode on display in the previous version, which is mistaking a coherent model for a correct one.</p>
+
+<p>Corrections are welcome. The longer original is still in this site's git history if anyone wants to see what it said.</p>
 
 </body>
 </html>
