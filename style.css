@@ -62,3 +62,11 @@ code, pre {
 
 .page-nav .prev::before { content: "« "; }
 .page-nav .next::after  { content: " »"; }
+
+.toc {
+  font-size: 0.95em;
+  margin: 1em 0 1.5em;
+  padding-left: 1.2em;
+}
+
+.toc li { margin: 0.15em 0; }
