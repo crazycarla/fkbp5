@@ -21,7 +21,7 @@
 <li><a href="#reading">What the controller is actually reading</a></li>
 <li><a href="#ketamine">Ketamine, and the problem of reaching the PVN</a></li>
 <li><a href="#cortisol-does-a-lot">Cortisol does more than stress</a></li>
-<li><a href="#low-cortisol">Low cortisol is documented, and the standard explanation has the arrow backwards</a> — including <a href="#dheas">DHEAS as the cheap check</a> and <a href="#gothenburg">what the Gothenburg group already did</a></li>
+<li><a href="#low-cortisol">Low cortisol is documented, and the standard explanation has the arrow backwards</a> — including <a href="#reference-range">why "normal" is the wrong comparison</a>, <a href="#dheas">DHEAS as the cheap check</a>, and <a href="#gothenburg">what the Gothenburg group already did</a></li>
 <li><a href="#not-cortisol-resistance">T/T is not standing cortisol resistance</a></li>
 <li><a href="#attention">The missing middle</a></li>
 <li><a href="#seasonal">Seasonal depression as a gain problem</a></li>
@@ -179,7 +179,45 @@
 
 <p>A fourth, from my own case, which I only understood afterwards. The pattern I had was not low all day. It was fine in the morning and a crash in the afternoon — the morning peak arrived, and then nothing held the level up through the day. That is roughly what a drive deficit should look like, since the morning rise is the one part of the axis's output keyed to the clock rather than to demand, and what goes missing is the output demand is supposed to command after it. An 8am draw samples the one part of the day that was working. It is the wrong hour on top of being the wrong instrument.</p>
 
-<p>This is the strongest argument for the marker in the next section. DHEAS has a long half-life and no meaningful diurnal rhythm, so it integrates over weeks and cannot be spoiled by one hard morning. It is the readout that does not care how you got to the lab.</p>
+<p>This is the strongest argument for <a href="#dheas">the marker below</a>. DHEAS has a long half-life and no meaningful diurnal rhythm, so it integrates over weeks and cannot be spoiled by one hard morning. It is the readout that does not care how you got to the lab. But there is a problem that comes before the choice of instrument, and it applies to whichever one you pick.</p>
+
+<h3 id="reference-range">Normal for a population is not normal for you</h3>
+
+<p>There is an objection that ends most of these conversations before they start: we looked, and the cortisol was normal. It deserves taking apart properly, because the reply is not that the test was wrong. It is that the comparison was wrong, and it is wrong in a way clinical chemistry has had a name and a formula for since 1974.</p>
+
+<p>A reference range is built by measuring a few hundred healthy people and keeping the middle 95%. So "below range" means below the 2.5th centile of a population — not below <em>your</em> normal, which nobody ever measured. Those are different questions, and whether the range can answer the second one depends entirely on how much of the population's spread comes from people differing from each other rather than from each person wobbling around their own setpoint.</p>
+
+<p>That ratio has a name. The index of individuality is within-person variation divided by between-person variation (Harris, 1974). Above about 1.4, everyone's own fluctuation carries them across most of the population spread, and the population range is a fair yardstick. Below about 0.6, each person occupies a narrow band inside a wide population spread, the range is close to useless for the individual, and the correct comparison is that person's own earlier values (Fraser, 2001). This is not a fringe position, it is textbook laboratory medicine, and it is why nobody diagnoses kidney disease from a single creatinine.</p>
+
+<p>The compiled biological variation figures for DHEAS:</p>
+
+<ul>
+<li>Within-person variation: around 6%.</li>
+<li>Between-person variation: around 31%.</li>
+<li>Index of individuality: therefore about 0.2.</li>
+</ul>
+
+<p>That is not near the line, it is a third of the way to it. DHEAS is close to a worst case for population reference ranges — precisely the sort of analyte where the textbook answer is that you must compare a person against themselves. And the practical consequence is severe. With a between-person spread that wide, the reference interval covers roughly a fourfold span from bottom to top, so you can lose half your DHEAS and land comfortably inside it. Your own noise is about 6%. The range you are being measured against is something like ten times wider than you are.</p>
+
+<p><strong>Which means "is this number in range" and "has this person's output fallen" are nearly unrelated questions, and only the second one is interesting.</strong></p>
+
+<p><strong>The paediatric comparison shows how arbitrary the current practice is.</strong> We already know how to do this properly, in exactly one branch of medicine. A child is plotted on a growth chart at every visit, and what triggers a workup is not a single low number but a change of position on the curve. A child tracking along the tenth centile is followed. A child who was on the fiftieth and is now on the tenth gets investigated, and nobody in that room says "still technically within normal limits." Paediatrics treats the trajectory as the datum and the population range as context. Adult endocrinology does the reverse — one cross-sectional number, checked against a range built from people who are not you, with no chart, no previous point, and no curiosity about where you came from. The same result that starts a referral in an eight-year-old ends the conversation in a thirty-eight-year-old.</p>
+
+<p><strong>And here is the version that is immediately obvious to anyone who has operated a system.</strong> Suppose I am looking at a live outage. The outage itself is not in dispute: the thing is down, users are complaining, that part is established. I pull up the dashboards, and every metric is technically inside its normal band — but they are all sitting near the bottom of it. Request rate low-normal. Worker utilisation low-normal. Queue depth low-normal. Throughput low-normal. No single graph is alarming.</p>
+
+<p>Nobody competent closes that ticket. The reading is immediate, and it is the opposite of reassuring: something upstream is under-driving the whole system. And the reason is not that any one metric looks suspicious. It is that they are all low <em>together</em>. Independent signals do not wander down to their tenth centile in unison by chance, so when correlated outputs sag at once the correlation is itself the finding — it points past all of them to the shared input. Common-mode depression across everything downstream of one controller is not noise. It is a signature, and it names the thing to go and look at.</p>
+
+<p>That is what a person with low-normal cortisol, low-normal DHEAS, a flattened diurnal curve and an established, undisputed loss of function looks like. The functional impairment is not in question, any more than the outage was. The graphs are all sitting at the bottoms of their bands. And the response is "technically normal, inconclusive" — which, in the server version, would get you quietly removed from the incident.</p>
+
+<p><strong>What breaks the deadlock is an earlier measurement, and it is the one thing almost nobody has.</strong> My own DHEAS fell about 40% across two years. Two things make that interpretable where a single draw would not be. The first is the reference change value: the difference between two measurements in one person that exceeds analytical and biological noise at 95% confidence, which for DHEAS lands somewhere around 20% depending on the assay. A 40% fall is roughly double that. The second is age. The expected age-related decline runs at 2 to 4% a year, so ageing accounts for perhaps 4 to 8 points of that interval, not 40. The fall is real, it is large, and it is not the calendar.</p>
+
+<p>Both measurements sat inside the population reference range the entire time.</p>
+
+<p>The same logic covers the four-point salivary profile that came back below range in the afternoon and was called inconclusive. Perhaps it was: one day's profile is one sample, and salivary cortisol does genuinely vary from day to day. But "inconclusive" describes the evidence, it does not prescribe a disposition. The response to an inconclusive result that points somewhere is to repeat it, and here that costs almost nothing. Calling it inconclusive and stopping converts a cheap, repeatable measurement into a reason not to look — and it does so in precisely the direction that preserves the conclusion already held.</p>
+
+<p>Three honest limits before anyone runs with this. Serial comparison only works within one assay at one laboratory, because DHEAS platforms differ enough that switching methods can manufacture a 40% shift on its own. Two points are a line and not a trend, and the argument gets considerably stronger at four. And a within-person decline tells you something moved; it does not tell you what moved it, and it is not by itself a diagnosis of anything.</p>
+
+<p>But the conclusion that follows is unusually clear, and it is the one piece of advice here that costs nothing and helps whether or not the rest of this page is right. <strong>Get the number now, while you are well.</strong> The reason nobody can say whether your level has fallen is that there is no earlier point to compare against, and the only moment you can create one is before you need it. A DHEAS every couple of years, same laboratory, filed somewhere you will find it, converts a near-useless cross-sectional test into an interpretable one for your future self. Hardly anyone does this. The cost of not doing it is that the question this section is about becomes permanently unanswerable in your own case.</p>
 
 <h3 id="dheas">DHEAS is the cheap way to check</h3>
 
@@ -193,7 +231,7 @@
 
 <p>DHEAS is a better instrument than cortisol for this, which is the part I wish were better known. It has a long half-life and essentially no circadian rhythm, so a single draw means something — whereas a single cortisol reading is close to uninterpretable, being pulsatile, diurnal, and responsive to the experience of having blood taken. In secondary adrenal insufficiency, DHEAS was low in 80 of 84 untreated patients, and low <em>more often than cortisol was</em> (Yamaji et al., 1987). The marker of drive turned out to be more sensitive than the hormone everyone actually orders.</p>
 
-<p>Three limits on how hard this can be pushed. Low DHEAS points upstream to ACTH, but it does not by itself separate hypothalamus from pituitary — PVN is where I would put my money, for the reasons above, but telling the two apart properly needs ACTH measured alongside and ideally a CRH stimulation test. DHEAS falls steeply with age, so "low" has to mean low for your age rather than under the lab's floor, which is a distinction routine reference ranges are bad at. And the first row of that table assumes the DHEAS arm cannot move without the drive moving, which turns out to be false — <a href="#gothenburg">the next section</a> has a study where the DHEAS response was 40% down with ACTH unchanged, and that is the most serious objection to this whole instrument.</p>
+<p>Three limits on how hard this can be pushed. Low DHEAS points upstream to ACTH, but it does not by itself separate hypothalamus from pituitary — PVN is where I would put my money, for the reasons above, but telling the two apart properly needs ACTH measured alongside and ideally a CRH stimulation test. DHEAS falls steeply with age, so "low" has to mean low for your age rather than under the lab's floor, which is a distinction routine reference ranges are bad at — and, for the reasons <a href="#reference-range">just above</a>, low against your own earlier value is better still. And the first row of that table assumes the DHEAS arm cannot move without the drive moving, which turns out to be false — <a href="#gothenburg">the next section</a> has a study where the DHEAS response was 40% down with ACTH unchanged, and that is the most serious objection to this whole instrument.</p>
 
 <h3 id="gothenburg">What the Gothenburg group already did</h3>
 
