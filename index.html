@@ -393,7 +393,7 @@
 
 <p>This section exists because I got the delivery wrong twice, in opposite directions, and the thing that fixed it was sitting down and doing the sums. I had been treating "how much DHEA" as one number. It is at least two, and the route decides which one you are moving.</p>
 
-<p><strong>The problem.</strong> The target is DHEA reaching the brain, and swallowing DHEA is an inefficient way to get it there. A swallowed dose passes through the liver first, where a sulfotransferase converts roughly 90% of it to DHEAS. That produces a large serum DHEAS number and a brief, small blip of free DHEA. Free DHEA crosses into the brain easily. DHEAS is charged and mostly does not, and the transporter-mediated and barrier-desulfating routes I leaned on <a href="#which-species">above</a> are real but small. So for brain exposure the pool that matters is free DHEA in plasma, and swallowing is a poor way to raise it. The clearest demonstration is in my own numbers: on a 25mg pill, which I did try, serum DHEAS went to 368 µg/dL, above the top of the range, in order to get something like 2.5mg of free DHEA into circulation.</p>
+<p><strong>The problem.</strong> The target is DHEA reaching the brain, and swallowing DHEA is an inefficient way to get it there. A swallowed dose passes through the liver first, where a sulfotransferase converts roughly 90% of it to DHEAS. That produces a large serum DHEAS number and a brief, small blip of free DHEA. Free DHEA crosses into the brain easily. DHEAS is charged and mostly does not, and the transporter-mediated and barrier-desulfating routes I leaned on <a href="#which-species">above</a> are real but small. So for brain exposure the pool that matters is free DHEA in plasma, and swallowing is a poor way to raise it. The clearest demonstration is in my own numbers: on a 25mg pill, which I did try, serum DHEAS went above the top of the reference range in order to get something like 2.5mg of free DHEA into circulation.</p>
 
 <p>Transdermal DHEA skips the first pass. What absorbs through the skin enters the blood as free DHEA. It still gets sulfated over the following hours, so it feeds DHEAS too, but in a very different ratio: roughly two parts free to one part sulfate, against about one to nine for a swallowed dose. Neither route on its own reproduces what the adrenal secretes, which is somewhere around one to two. That is why the answer turned out to be a blend rather than a switch.</p>
 
@@ -419,7 +419,7 @@
 <tr><th>Assumption</th><th>Value</th><th>Basis</th></tr>
 <tr><td>Healthy adrenal output, free DHEA</td><td>About 7mg a day</td><td>Textbook production-rate estimates for an adult woman; approximate</td></tr>
 <tr><td>Healthy adrenal output, DHEAS</td><td>About 12mg a day</td><td>Same; approximate</td></tr>
-<tr><td>Current output against target</td><td>60%</td><td>DHEAS was 283 µg/dL when I was well and had fallen to 141 about two and a half years later. Against the 245 I am aiming at, the middle of the lab's range for my age rather than my own old peak, that is about 60%. The ratio of free to sulfate is assumed unchanged</td></tr>
+<tr><td>Current output against target</td><td>60%</td><td>DHEAS fell by about 40% over roughly two and a half years, measured at the same lab both times, so the current level is about 60% of where it was when I was well. The ratio of free to sulfate is assumed unchanged. One caveat: my draws since have been at a different lab, whose reference range differs slightly, so the two sets of numbers are not directly comparable and the 40% is the within-lab figure</td></tr>
 <tr><td>First-pass sulfation of a swallowed dose</td><td>90%</td><td>Standard oral DHEA pharmacokinetics: most of the dose appears as DHEAS</td></tr>
 <tr><td>Skin absorption, DHEA in ethanol on thin skin</td><td>20%</td><td>Closest comparison is testosterone axillary solutions and gels, around 10 to 20%</td></tr>
 <tr><td>Skin absorption, commercial lotion on thick skin</td><td>10%</td><td>Lower concentration, slower site; the felt effect was minimal</td></tr>
@@ -459,7 +459,7 @@ sulfate:  0.7 T + 0.9 O = 4.8</pre>
 <p><strong>What the model explains after the fact.</strong> It was built to size a dose, but it also accounts for the dosing history without any extra parameters, which is the nearest thing to a check I have until the next draw.</p>
 
 <ul>
-<li><strong>The 25mg pill.</strong> At 10% free, 25mg swallowed delivers about 2.5mg of free DHEA, almost exactly the 2.8mg gap. That is why 25mg was the only swallowed dose that ended the morning grogginess. The other 22.5mg became DHEAS, about five times the reservoir gap, which produced the 368 µg/dL result. The pill fixed the brain compartment by brute force and overfilled the body compartment as the price.</li>
+<li><strong>The 25mg pill.</strong> At 10% free, 25mg swallowed delivers about 2.5mg of free DHEA, almost exactly the 2.8mg gap. That is why 25mg was the only swallowed dose that ended the morning grogginess. The other 22.5mg became DHEAS, about five times the reservoir gap, which is what pushed the serum number over the top of the range. The pill fixed the brain compartment by brute force and overfilled the body compartment as the price.</li>
 <li><strong>The oral series.</strong> 7.5mg gave about 0.75mg free, and I was groggy. 15mg spread through the day gave about 1.5mg, and it was partial. 25mg gave 2.5mg, and the grogginess went. Three points on the free-DHEA axis, and the effect switched on where the model says it should.</li>
 <li><strong>The 15mg ethanol shot.</strong> 15mg in ethanol on armpit skin at 20% delivers about 3mg of free DHEA in about twenty minutes, more than the adrenal makes in most of a day, with no liver in the way. That is a spike, not a dose, and it produced agitation. The same total spread over thicker skin keeps the exposure and loses the spike.</li>
 <li><strong>The lotion felt like nothing.</strong> Three applications of 15mg of a commercial lotion at 10% is about 4.5mg of free DHEA a day, about 1.6 times the gap. It felt minimal because it was nearly right. The error was carrying the 15mg unit from lotion to ethanol without recomputing: same label, double the absorption, ten times the speed.</li>
@@ -482,11 +482,11 @@ sulfate:  0.7 T + 0.9 O = 4.8</pre>
 <table>
 <tr><th>Lab value</th><th>What it checks</th><th>What to do with it</th></tr>
 <tr><td>Unconjugated DHEA</td><td>The skin absorption fraction, and the only proxy for brain exposure</td><td>High with agitation: lower the skin dose. Low with grogginess: raise it</td></tr>
-<tr><td>DHEAS</td><td>The sulfation fraction and reservoir refill; target around 245 µg/dL</td><td>In the 200s: the swallowed dose is right. Near 150: raise the swallowed dose, not the skin dose</td></tr>
+<tr><td>DHEAS</td><td>The sulfation fraction and reservoir refill; target is the level I held when well, which sits in the middle of the reference range</td><td>Back in the middle of the range: the swallowed dose is right. Still near where it started: raise the swallowed dose, not the skin dose</td></tr>
 <tr><td>Testosterone</td><td>A sanity check on the 20% absorption guess, via peripheral conversion</td><td>Well above the previous low-normal: absorption is higher than assumed, so lower the skin dose</td></tr>
 </table>
 
-<p>Two measured values and two unknowns, the absorption fraction and the sulfation fraction, make this a real solve rather than a guess. After the draw, the assumed rows in the table above get replaced with measured ones and the arithmetic is rerun. If DHEAS comes back near 240 with unconjugated DHEA in range and no agitation, the model is roughly right and the tuning stops.</p>
+<p>Two measured values and two unknowns, the absorption fraction and the sulfation fraction, make this a real solve rather than a guess. After the draw, the assumed rows in the table above get replaced with measured ones and the arithmetic is rerun. If DHEAS comes back near the level I held when well, with unconjugated DHEA in range and no agitation, the model is roughly right and the tuning stops.</p>
 
 <h3 id="what-is-wrong-with-it">What is wrong with it</h3>
 
